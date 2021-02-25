@@ -54,15 +54,10 @@ echo 'Customize system'
 echo ''
 echo '>>> Installing gnome-tweak-tool'
 sudo apt install gnome-tweak-tool -y
-echo '>>> Installing Third-Party theme'
-sudo snap install communitheme
-echo '>>> Configure system && communitheme'
+echo '>>> Configure system'
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
-gsettings set org.gnome.desktop.interface gtk-theme 'Communitheme'
-gsettings set org.gnome.desktop.interface cursor-theme 'communitheme'
-gsettings set org.gnome.desktop.interface icon-theme 'communitheme'
 echo '>>> Installing tilix'
 sudo apt install tilix -y
 echo '>>> Setting terminator as default terminal'
