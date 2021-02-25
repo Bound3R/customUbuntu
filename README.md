@@ -62,3 +62,15 @@ code --install-extension MS-vsliveshare.vsliveshare
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ritwickdey.LiveServer
 ```
+
+---
+
+## ToDo
+- [x] gnome extensions
+- [x] vsc Extensions
+- [ ] scrcpy
+- [ ] docker
+- [ ] filezilla
+- [ ] anydesk
+- [ ] teamviewer
+- [ ] AOE2 HD configuration
