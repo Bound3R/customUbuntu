@@ -30,7 +30,7 @@ curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o 
 
 ## Optional extensions for visual studio code
 
-use this command for install by console
+use this commands for install by console
 ```
 code --install-extension Equinusocio.vsc-material-theme
 code --install-extension Equinusocio.vsc-material-theme-icons
