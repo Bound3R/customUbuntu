@@ -1,4 +1,12 @@
 # customUbuntu
+## Requirements
+Must execute with sudo or root
+
+Installed Curl:
+```
+sudo apt install curl
+```
+
 ## Installation
 
 Download:
@@ -7,7 +15,7 @@ Download:
 curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o setup.sh
 ```
 
-Run as root:
+Remember run as root:
 
 ```
 sudo bash setup.sh
