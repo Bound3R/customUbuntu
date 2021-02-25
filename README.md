@@ -2,7 +2,7 @@
 ## Requirements
 Must execute with sudo or root
 
-Installed Curl:
+Installed curl:
 ```
 sudo apt install curl
 ```
@@ -25,5 +25,5 @@ sudo bash setup.sh
 
 Alternative download and install short:
 ```
-curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o setup.sh && sudo bash setup.sh^C
+curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o setup.sh && sudo bash setup.sh
 ```
