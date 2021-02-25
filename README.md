@@ -4,5 +4,5 @@
 Download:
 
 ```
-curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/blob/main/setup.sh -o setup.sh
+curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o setup.sh
 ```
