@@ -38,11 +38,13 @@ echo 'Done.'
 echo ''
 echo 'SO essentials'
 echo ''
-echo 'Installing curl'
+echo 'Installing libs'
 sudo apt install libxss1 libappindicator1 libindicator7 -y
-sudo apt install curl -y
+echo 'Installing snap'
 sudo apt install snapd -y
+echo 'Installing snap-store'
 sudo snap install snap-store -y
+echo 'Done.'
 
 echo ''
 echo 'Customize system'
