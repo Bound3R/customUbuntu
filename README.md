@@ -30,8 +30,11 @@ curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o 
 
 ## Optional extensions for gnome
 after install gnome-tweak-tool, use the browser complement to add:
+
 [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect)
+
 [Random Wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)
+
 [system-monitor](https://extensions.gnome.org/extension/120/system-monitor)
 
 
