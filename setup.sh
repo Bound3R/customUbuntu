@@ -43,7 +43,7 @@ sudo apt install libxss1 libappindicator1 libindicator7 -y
 echo 'Installing snap'
 sudo apt install snapd -y
 echo 'Installing snap-store'
-sudo snap install snap-store -y
+sudo snap install snap-store
 echo 'Done.'
 
 echo ''
@@ -52,7 +52,7 @@ echo ''
 echo 'Installing gnome-tweak-tool'
 sudo apt install gnome-tweak-tool -y
 echo 'Install Third-Party theme'
-sudo snap install communitheme -y
+sudo snap install communitheme 
 echo 'Configure system && communitheme'
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
@@ -90,24 +90,24 @@ echo ''
 echo 'Installing applications for development...'
 echo ''
 echo 'Installing 1password'
-sudo snap install 1password --edge -y
+sudo snap install 1password --edge 
 echo 'Installing vscode'
-sudo snap install code --classic -y
+sudo snap install code --classic 
 echo 'Installing postman'
-sudo snap install postman -y
+sudo snap install postman 
 echo 'Installing beekeeper studio'
-sudo snap install beekeeper-studio -y
+sudo snap install beekeeper-studio 
 echo 'Installing smartgit'
 sudo apt install smartgit -y
 sudo apt install smartgithg -y
 echo 'Installing spotify'
-sudo snap install spotify -y
+sudo snap install spotify 
 echo 'Installing gimp'
-sudo snap install gimp -y
+sudo snap install gimp 
 echo 'Installing inkscape'
-sudo snap install inkscape -y
+sudo snap install inkscape 
 echo 'Installing simplescreenrecorder'
-sudo snap install simplescreenrecorder -y
+sudo snap install simplescreenrecorder 
 echo 'Done.'
 
 echo ''
