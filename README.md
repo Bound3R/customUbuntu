@@ -21,16 +21,12 @@ Remember run as root:
 sudo bash setup.sh
 ```
 
-
-
-=============================
-
-
-
 Alternative download and install short:
 ```
 curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o setup.sh && sudo bash setup.sh
 ```
+
+---
 
 ## Optional extensions for gnome
 after install gnome-tweak-tool, use the browser complement to add:
