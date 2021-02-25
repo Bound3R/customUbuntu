@@ -62,7 +62,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 echo '>>> Installing tilix'
 sudo apt install tilix -y
 echo '>>> Setting terminator as default terminal'
-gsettings set org.gnome.desktop.default-applications.terminal exec 'terminator'
+gsettings set org.gnome.desktop.default-applications.terminal exec 'tilix'
 echo 'Done.'
 
 echo ''
