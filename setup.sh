@@ -55,6 +55,7 @@ echo ''
 echo '>>> Installing gnome-tweak-tool'
 sudo apt install gnome-tweak-tool -y
 echo '>>> Configure system'
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
