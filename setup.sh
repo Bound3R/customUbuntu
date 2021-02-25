@@ -105,6 +105,13 @@ sudo snap install beekeeper-studio
 echo '>>> Installing smartgit'
 sudo apt install smartgit -y
 sudo apt install smartgithg -y
+echo '>>> Installing slack'
+sudo snap install slack --classic
+echo 'Done.'
+
+echo ''
+echo '##########'
+echo 'Installing selected favourite applications...'
 echo '>>> Installing spotify'
 sudo snap install spotify
 echo '>>> Installing gimp'
@@ -113,11 +120,6 @@ echo '>>> Installing inkscape'
 sudo snap install inkscape
 echo '>>> Installing simplescreenrecorder'
 sudo snap install simplescreenrecorder
-echo 'Done.'
-
-echo ''
-echo '##########'
-echo 'Installing selected favourite applications...'
 echo '>>> Installing steam'
 sudo apt install steam -y
 echo '>>> Installing safeeyes'
