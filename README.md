@@ -68,9 +68,12 @@ code --install-extension ritwickdey.LiveServer
 ## ToDo
 - [x] gnome extensions
 - [x] vsc Extensions
+- [ ] sshpass
 - [ ] scrcpy
 - [ ] docker
 - [ ] filezilla
 - [ ] anydesk
 - [ ] teamviewer
+- [ ] wine
+- [ ] proton
 - [ ] AOE2 HD configuration
