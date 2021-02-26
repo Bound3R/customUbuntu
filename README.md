@@ -70,6 +70,7 @@ code --install-extension ritwickdey.LiveServer
 - [x] vsc Extensions
 - [ ] sshpass
 - [ ] scrcpy
+- [ ] command for disable/enable mic input
 - [ ] docker
 - [ ] filezilla
 - [ ] anydesk
