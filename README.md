@@ -69,7 +69,7 @@ code --install-extension ritwickdey.LiveServer
 - [x] gnome extensions
 - [x] vsc Extensions
 - [ ] sshpass
-- [ ] scrcpy
+- [x] scrcpy
 - [ ] command for disable/enable mic input
 - [ ] docker
 - [ ] filezilla
