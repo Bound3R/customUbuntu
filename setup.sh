@@ -84,6 +84,8 @@ echo '>>> Installing yarn'
 sudo npm install --global yarn -y
 echo '>>> Installing expo'
 sudo npm install -g expo-cli -y
+echo '>>> Installing scrcpy'
+sudo snap install scrcpy
 echo 'Done.'
 
 echo ''
