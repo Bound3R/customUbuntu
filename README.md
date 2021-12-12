@@ -37,6 +37,8 @@ after install gnome-tweak-tool, use the browser complement to add:
 
 [system-monitor](https://extensions.gnome.org/extension/120/system-monitor)
 
+[WinTile](https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for-gnome)
+
 
 ## Optional extensions for visual studio code
 
