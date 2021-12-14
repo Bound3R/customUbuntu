@@ -11,8 +11,9 @@ echo '╚═════╝  ╚═════╝  ╚═════╝ ╚═
 echo ''
 echo ''
 
-# Goal: Script which automatically sets up a new Ubuntu Machine after installation
+# Goal: Script which automatically sets up a new Ubuntu based Machine after installation
 # This is a basic install, easily configurable to your needs
+# Alert!: Currently supports only Ubuntu/Pop!_OS 20.04 LTS
 
 echo "Welcome! Let's start setting up your system. It could take more than 10 minutes, be patient"
 
@@ -29,10 +30,10 @@ echo 'Requires root privileges:'
 sudo add-apt-repository multiverse -y
 sudo add-apt-repository ppa:eugenesan/ppa -y
 sudo add-apt-repository ppa:slgobinath/safeeyes -y
-sudo apt-get update -y
+sudo apt update -y
 # Dist-Upgrade
 echo 'Performing system upgrade...'
-sudo apt-get dist-upgrade -y
+sudo apt dist-upgrade -y
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 echo 'Done.'
 
