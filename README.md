@@ -5,7 +5,7 @@ Must execute with sudo or root.
 :warning: Currently supports only Ubuntu - Pop!_OS 20.04 LTS.
 
 Installed curl:
-```
+```sh
 sudo apt update
 sudo apt install curl -y
 ```
@@ -13,25 +13,24 @@ sudo apt install curl -y
 ## :rocket: Installation
 
 Download:
-```
+```sh
 curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o setup.sh
 ```
 
 Remember run as root:
-```
+```sh
 sudo bash setup.sh
 ```
 
 Alternative download and install short:
-```
+```sh
 curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o setup.sh && sudo bash setup.sh
 ```
 
 ---
 
-## :art: GNOME extensions
-after install gnome-tweak-tool, use the browser complement to add:
-
+## :art: GNOME config
+After install gnome-tweak-tool, use the browser complement to add:  
 [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect)  
 [Random Wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)  
 [system-monitor](https://extensions.gnome.org/extension/120/system-monitor)
@@ -42,13 +41,21 @@ after install gnome-tweak-tool, use the browser complement to add:
 
 ### Creation dev environment
 Create development folder:
-```
+```sh
 mkdir development
+```
+Install `nvm`
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+```
+```sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
 ### VSCODE extensions
 use this commands for install by console
-```
+```sh
 code --install-extension EditorConfig.EditorConfig
 code --install-extension Equinusocio.vsc-material-theme-icons
 code --install-extension shardulm94.trailing-spaces
@@ -61,7 +68,7 @@ code --install-extension GitHub.copilot
 ```
 
 optional extensions
-```
+```sh
 code --install-extension ms-vscode.sublime-keybindings
 code --install-extension christian-kohler.path-intellisense
 code --install-extension naumovs.color-highlight
