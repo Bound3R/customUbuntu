@@ -146,10 +146,3 @@ echo 'Setting up your git global user name and email'
 git config --global user.name '$git_config_user_name'
 git config --global user.email $git_config_user_email
 echo 'Done.'
-
-echo ''
-echo '##########'
-echo 'creation dev environment initiated, please wait for the end of the process.'
-echo 'Create development folder'
-mkdir development
-echo 'Done.'
