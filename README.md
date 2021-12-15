@@ -10,7 +10,7 @@ sudo apt update
 sudo apt install curl -y
 ```
 
-## Installation
+## :rocket: Installation
 
 Download:
 ```
@@ -36,8 +36,17 @@ after install gnome-tweak-tool, use the browser complement to add:
 [Random Wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)  
 [system-monitor](https://extensions.gnome.org/extension/120/system-monitor)
 
+---
 
-## :computer: VSCODE extensions
+## :computer: :sunglasses: Developer config
+
+### Creation dev environment
+Create development folder:
+```
+mkdir development
+```
+
+### VSCODE extensions
 use this commands for install by console
 ```
 code --install-extension EditorConfig.EditorConfig
