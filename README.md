@@ -2,7 +2,7 @@
 
 ## Requirements
 Must execute with sudo or root.  
-:warning: Currently supports only Ubuntu - Pop!_OS 20.04 LTS.
+:warning: Currently supports only Ubuntu 20.04 LTS.
 
 Installed curl:
 ```sh
