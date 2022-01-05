@@ -55,15 +55,8 @@ echo 'Customize system'
 echo ''
 echo '>>> Installing gnome-tweak-tool'
 sudo apt install gnome-tweak-tool -y
-echo '>>> Configure system'
-gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
-gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 echo '>>> Installing tilix'
 sudo apt install tilix -y
-echo '>>> Setting terminator as default terminal'
-gsettings set org.gnome.desktop.default-applications.terminal exec 'tilix'
 echo 'Done.'
 
 echo ''
@@ -145,4 +138,17 @@ read git_config_user_email
 echo 'Setting up your git global user name and email'
 git config --global user.name '$git_config_user_name'
 git config --global user.email $git_config_user_email
+echo 'Done.'
+
+echo '>>> Configure system style'
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
+gsettings set org.gnome.shell.extensions.dash-to-dock autohide 24
+gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+echo 'Done.'
+
+echo '>>> Setting terminator as default terminal'
+gsettings set org.gnome.desktop.default-applications.terminal exec 'tilix'
 echo 'Done.'
