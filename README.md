@@ -93,3 +93,4 @@ code --install-extension softwaredotcom.swdc-vscode
 - [ ] wine
 - [ ] proton
 - [ ] AOE2 HD configuration
+- [ ] Configuration for use Drakula theme
