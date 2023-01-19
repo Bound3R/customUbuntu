@@ -83,6 +83,7 @@ code --install-extension softwaredotcom.swdc-vscode
 ## :memo: ToDo
 - [x] gnome extensions
 - [x] vsc Extensions
+- [ ] use Flatpack for increase performance
 - [ ] sshpass
 - [x] scrcpy
 - [ ] command for disable/enable mic input
@@ -93,4 +94,4 @@ code --install-extension softwaredotcom.swdc-vscode
 - [ ] wine
 - [ ] proton
 - [ ] AOE2 HD configuration
-- [ ] Configuration for use Drakula theme
+- [ ] Configuration for use custom Theme
