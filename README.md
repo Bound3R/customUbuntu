@@ -33,6 +33,7 @@ curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o 
 After install gnome-tweak-tool, use the browser complement to add:  
 [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect)  
 [Random Wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)  
+[Pano - Clipboard Manager](https://extensions.gnome.org/extension/5278/pano) 
 
 ---
 
@@ -82,7 +83,7 @@ code --install-extension msjsdiag.vscode-react-native
 - [ ] sshpass
 - [x] scrcpy
 - [ ] command for disable/enable mic input
-- [ ] docker
+- [ ] docker/docker-desktop
 - [ ] anydesk
 - [x] wine
 - [ ] proton
