@@ -30,11 +30,12 @@ The GNOME Shell Extensions mainly work as extensions for your web browsers, such
 
 GNOME Extensions website: https://extensions.gnome.org/
 
-| Name                     	| Link                                                                                                                                       	|
-|--------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------	|
-| Bluetooth quick connect  	| [https://extensions.gnome.org/extension/1401/bluetooth-quick-connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect) 	|
-| Random Wallpaper         	| [https://extensions.gnome.org/extension/1040/random-wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)               	|
-| Pano - Clipboard Manager 	| [https://extensions.gnome.org/extension/5278/pano](https://extensions.gnome.org/extension/5278/pano)                                       	|
+| Name                     	| Link                                                                                                                                        	|
+|--------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bluetooth quick connect  	| [https://extensions.gnome.org/extension/1401/bluetooth-quick-connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect)  	|
+| Random Wallpaper         	| [https://extensions.gnome.org/extension/1040/random-wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)                	|
+| Pano - Clipboard Manager 	| [https://extensions.gnome.org/extension/5278/pano](https://extensions.gnome.org/extension/5278/pano)                                        	|
+| Replace Activities Label 	| [https://extensions.gnome.org/extension/5706/replace-activities-label](https://extensions.gnome.org/extension/5706/replace-activities-label) 	|
 
 ## :hammer_and_pick: Developer configuration
 Create development folder:
