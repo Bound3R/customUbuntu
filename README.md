@@ -5,8 +5,9 @@
 
 ---
 ## Requirements
-* Must execute with `root`.   
-* ![Ubuntu Version](https://img.shields.io/badge/ubuntu-22.04%20LTS-orange?style=for-the-badge&logo=ubuntu&logoColor=white)
+[![Ubuntu Version](https://img.shields.io/badge/ubuntu-22.04%20LTS-orange?style=for-the-badge&logo=ubuntu&logoColor=white)](https://releases.ubuntu.com/jammy/)   
+:warning: Must execute with `root`. 
+
 
 
 Installed curl:
