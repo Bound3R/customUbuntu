@@ -20,6 +20,12 @@ curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o 
 ```
 
 ## :art: GNOME extensions
+GNOME Shell Extensions are a great way for GNOME desktop users to customize their user experience by configuring interface components like launching animations, window management.
+
+The GNOME Shell Extensions mainly work as extensions for your web browsers, such as chrome or firefox. Installation is done with just a flick of a button. A must-have feature to have after installing Ubuntu.
+
+GNOME Extensions website: https://extensions.gnome.org/
+
 | Name                     	| Link                                                                                                                                       	|
 |--------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------	|
 | Bluetooth quick connect  	| [https://extensions.gnome.org/extension/1401/bluetooth-quick-connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect) 	|
