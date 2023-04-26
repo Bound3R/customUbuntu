@@ -1,9 +1,12 @@
-# CustomUbuntu
-![Ubuntu Version](https://img.shields.io/badge/ubuntu-22.04%20LTS-orange?style=for-the-badge&logo=ubuntu&logoColor=white)
+<!-- Heading -->
+<h1 align="center">customUbuntu</h1>
+<p align="center"><em>Ubuntu based OS post install script</em> that I use to update packages, install most used apps and set configs.</p>
+<br>
 
+---
 ## Requirements
-Must execute with sudo or root.   
-:warning: Currently supports only Ubuntu 22.04 LTS  
+* Must execute with `root`.   
+* ![Ubuntu Version](https://img.shields.io/badge/ubuntu-22.04%20LTS-orange?style=for-the-badge&logo=ubuntu&logoColor=white)
 
 
 Installed curl:
