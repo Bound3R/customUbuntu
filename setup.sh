@@ -74,9 +74,13 @@ echo 'Installing essentials development...'
 echo ''
 echo '>>> Installing git'
 sudo apt install git -y
+echo '>>> Installing docker'
+sudo apt install docker docker-compose
 echo '>>> Installing jdk'
 sudo apt install default-jdk -y
 java -version
+echo '>>> Installing python3'
+sudo apt-get install python3
 echo '>>> Installing python3-pip'
 sudo apt-get install python3-pip -y
 echo '>>> Installing nodejs'
