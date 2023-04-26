@@ -1,8 +1,9 @@
 # customUbuntu
 
 ## Requirements
-Must execute with sudo or root.  
-:warning: Currently supports only Ubuntu 22.04 LTS.
+Must execute with sudo or root.
+
+[![:warning: Currently supports only](https://img.shields.io/badge/ubuntu-22.04%20LTS-orange)](https://ubuntu.com/download/desktop/thank-you?version=22.04.2&architecture=amd64)
 
 Installed curl:
 ```sh
@@ -53,8 +54,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
-### VSCODE extensions
+### VSCODE extensions 
 use this commands for install by console
+<details>
+<summary>Essenatials:</summary>
+
 ```sh
 code --install-extension EditorConfig.EditorConfig
 code --install-extension GitHub.copilot
@@ -63,8 +67,10 @@ code --install-extension wayou.vscode-todo-highlight
 code --install-extension MS-vsliveshare.vsliveshare
 code --install-extension rangav.vscode-thunder-client
 ```
+</details>
+<details>
+<summary>Optionals:</summary>
 
-optional extensions
 ```sh
 code --install-extension GitHub.copilot
 code --install-extension softwaredotcom.swdc-vscode
@@ -73,8 +79,8 @@ code --install-extension naumovs.color-highlight
 code --install-extension Syler.sass-indented
 code --install-extension msjsdiag.vscode-react-native
 ```
-
----
+</details>
+<hr>
 
 ## :memo: ToDo
 - [x] gnome extensions
