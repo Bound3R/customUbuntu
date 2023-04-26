@@ -13,7 +13,7 @@ echo ''
 
 # Goal: Script which automatically sets up a new Ubuntu based Machine after installation
 # This is a basic install, easily configurable to your needs
-# Alert!: Currently supports only Ubuntu/Pop!_OS 20.04 LTS
+# Note!: Currently supports only Ubuntu 22.04 LTS
 
 echo "Welcome! Let's start setting up your system. It could take more than 10 minutes, be patient"
 
@@ -27,14 +27,15 @@ echo ''
 echo '##########'
 echo 'Updating repository information...'
 echo 'Requires root privileges:'
-sudo add-apt-repository multiverse -y
-sudo add-apt-repository ppa:eugenesan/ppa -y
-sudo add-apt-repository ppa:slgobinath/safeeyes -y
 sudo apt update -y
+sudo apt upgrade -y
 # Dist-Upgrade
 echo 'Performing system upgrade...'
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse -y
+sudo add-apt-repository ppa:eugenesan/ppa -y
+sudo apt-get install synaptic -y
 sudo apt dist-upgrade -y
-echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 echo 'Done.'
 
 echo ''
@@ -43,10 +44,15 @@ echo 'SO essentials'
 echo ''
 echo '>>> Installing libs'
 sudo apt install libxss1 libappindicator1 libindicator7 -y
-echo '>>> Installing snap'
-sudo apt install snapd -y
-echo '>>> Installing snap-store'
-sudo snap install snap-store
+echo '>>> Install Multimedia Codecs'
+sudo apt-get install Ubuntu-restricted-extras
+echo '>>> Enable Firewall'
+sudo ufw enable
+sudo apt-get install gufw -y
+echo '>>> Installing Flatpak'
+sudo apt-get install flatpak -y
+sudo apt-get install gnome-software-plugin-flatpak -y
+flatpak remote-add --if-not-exists flathub https://flathub-org/repo/flathub.flatpakrepo
 echo 'Done.'
 
 echo ''
@@ -54,9 +60,12 @@ echo '##########'
 echo 'Customize system'
 echo ''
 echo '>>> Installing gnome-tweak-tool'
-sudo apt install gnome-tweak-tool -y
+sudo apt install gnome-tweaks -y
+sudo apt install gnome-shell-extension-manager -y
 echo '>>> Installing tilix'
 sudo apt install tilix -y
+echo '>>> Installing gnome sushi'
+sudo apt-get install gnome-sushi
 echo 'Done.'
 
 echo ''
@@ -78,44 +87,45 @@ echo '>>> Installing yarn'
 sudo npm install --global yarn -y
 echo '>>> Installing expo'
 sudo npm install -g expo-cli -y
-echo '>>> Installing scrcpy'
-sudo snap install scrcpy
 echo 'Done.'
 
 echo ''
 echo '##########'
 echo 'Installing applications for development...'
 echo ''
-echo '>>> Installing 1password'
-sudo snap install 1password --edge
 echo '>>> Installing vscode'
-sudo snap install code --classic
-echo '>>> Installing postman'
-sudo snap install postman
-echo '>>> Installing beekeeper studio'
-sudo snap install beekeeper-studio
+flatpak install flathub com.visualstudio.code -y
 echo '>>> Installing smartgit'
 sudo apt install smartgit -y
 sudo apt install smartgithg -y
+echo '>>> Installing gitkraken'
+flatpak install flathub com.axosoft.GitKraken
 echo '>>> Installing slack'
-sudo snap install slack --classic
+flatpak install flathub com.slack.Slack -y
+echo '>>> Installing htop'
+sudo apt install htop
+echo '>>> Installing scrcpy'
+flatpak install flathub in.srev.guiscrcpy -y
 echo 'Done.'
 
 echo ''
 echo '##########'
 echo 'Installing selected favourite applications...'
+echo '>>> Installing Google Chrome'
+flatpak install flathub com.google.Chrome
+echo '>>> Installing libreOffice'
+flatpak install flathub org.libreoffice.LibreOffice
 echo '>>> Installing spotify'
-sudo snap install spotify
+flatpak install flathub com.spotify.Client
 echo '>>> Installing gimp'
-sudo snap install gimp
+flatpak install flathub org.gimp.GIMP
 echo '>>> Installing inkscape'
-sudo snap install inkscape
+flatpak install flathub org.inkscape.Inkscape
 echo '>>> Installing simplescreenrecorder'
-sudo snap install simplescreenrecorder
+sudo apt-get install simplescreenrecorder
 echo '>>> Installing steam'
 sudo apt install steam -y
-echo '>>> Installing safeeyes'
-sudo apt install safeeyes -y
+sudo apt install wine -y
 echo 'Done.'
 
 echo ''
@@ -147,6 +157,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide 24
 gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+gsettings set org.gnome.mutter center-new-windows true
 echo 'Done.'
 
 echo '>>> Setting terminator as default terminal'

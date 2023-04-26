@@ -33,7 +33,6 @@ curl -f https://raw.githubusercontent.com/Bound3R/customUbuntu/main/setup.sh -o 
 After install gnome-tweak-tool, use the browser complement to add:  
 [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect)  
 [Random Wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)  
-[system-monitor](https://extensions.gnome.org/extension/120/system-monitor)
 
 ---
 
@@ -42,7 +41,7 @@ After install gnome-tweak-tool, use the browser complement to add:
 ### Creation dev environment
 Create development folder:
 ```sh
-mkdir development
+mkdir Development
 ```
 Install `nvm`
 ```sh
@@ -57,25 +56,21 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 use this commands for install by console
 ```sh
 code --install-extension EditorConfig.EditorConfig
-code --install-extension Equinusocio.vsc-material-theme-icons
+code --install-extension GitHub.copilot
 code --install-extension shardulm94.trailing-spaces
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension MS-vsliveshare.vsliveshare
-code --install-extension ms-vscode-remote.remote-ssh
-code --install-extension ritwickdey.LiveServer
 code --install-extension rangav.vscode-thunder-client
-code --install-extension GitHub.copilot
 ```
 
 optional extensions
 ```sh
-code --install-extension ms-vscode.sublime-keybindings
+code --install-extension GitHub.copilot
+code --install-extension softwaredotcom.swdc-vscode
 code --install-extension christian-kohler.path-intellisense
 code --install-extension naumovs.color-highlight
 code --install-extension Syler.sass-indented
 code --install-extension msjsdiag.vscode-react-native
-code --install-extension GitHub.copilot
-code --install-extension softwaredotcom.swdc-vscode
 ```
 
 ---
@@ -83,15 +78,13 @@ code --install-extension softwaredotcom.swdc-vscode
 ## :memo: ToDo
 - [x] gnome extensions
 - [x] vsc Extensions
-- [ ] use Flatpack for increase performance
+- [x] use Flatpack for increase performance
 - [ ] sshpass
 - [x] scrcpy
 - [ ] command for disable/enable mic input
 - [ ] docker
-- [ ] filezilla
 - [ ] anydesk
-- [ ] teamviewer
-- [ ] wine
+- [x] wine
 - [ ] proton
 - [ ] AOE2 HD configuration
 - [ ] Configuration for use custom Theme
