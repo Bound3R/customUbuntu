@@ -62,8 +62,6 @@ echo ''
 echo '>>> Installing gnome-tweak-tool'
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-shell-extension-manager -y
-echo '>>> Installing tilix'
-sudo apt install tilix -y
 echo '>>> Installing gnome sushi'
 sudo apt-get install gnome-sushi
 echo 'Done.'
@@ -74,8 +72,6 @@ echo 'Installing essentials development...'
 echo ''
 echo '>>> Installing git'
 sudo apt install git -y
-echo '>>> Installing docker'
-sudo apt install docker docker-compose
 echo '>>> Installing jdk'
 sudo apt install default-jdk -y
 java -version
