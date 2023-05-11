@@ -156,7 +156,3 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
 gsettings set org.gnome.mutter center-new-windows true
 echo 'Done.'
-
-echo '>>> Setting terminator as default terminal'
-gsettings set org.gnome.desktop.default-applications.terminal exec 'tilix'
-echo 'Done.'
