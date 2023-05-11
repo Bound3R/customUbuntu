@@ -34,8 +34,6 @@ GNOME Extensions website: https://extensions.gnome.org/
 |--------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bluetooth quick connect  	| [https://extensions.gnome.org/extension/1401/bluetooth-quick-connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect)  	|
 | Tiling Assistant        	| [https://extensions.gnome.org/extension/3733/tiling-assistant](https://extensions.gnome.org/extension/3733/tiling-assistant)                	|
-| Random Wallpaper         	| [https://extensions.gnome.org/extension/1040/random-wallpaper](https://extensions.gnome.org/extension/1040/random-wallpaper)                	|
-| Pano - Clipboard Manager 	| [https://extensions.gnome.org/extension/5278/pano](https://extensions.gnome.org/extension/5278/pano)                                        	|
 | Replace Activities Label 	| [https://extensions.gnome.org/extension/5706/replace-activities-label](https://extensions.gnome.org/extension/5706/replace-activities-label) 	|
 
 ## :hammer_and_pick: Developer configuration
