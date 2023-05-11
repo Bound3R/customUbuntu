@@ -98,10 +98,6 @@ flatpak install flathub com.visualstudio.code -y
 echo '>>> Installing smartgit'
 sudo apt install smartgit -y
 sudo apt install smartgithg -y
-echo '>>> Installing gitkraken'
-flatpak install flathub com.axosoft.GitKraken
-echo '>>> Installing slack'
-flatpak install flathub com.slack.Slack -y
 echo '>>> Installing htop'
 sudo apt install htop
 echo '>>> Installing scrcpy'
