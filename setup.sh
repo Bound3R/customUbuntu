@@ -13,123 +13,118 @@ echo ''
 
 # Goal: Script which automatically sets up a new Ubuntu based Machine after installation
 # This is a basic install, easily configurable to your needs
-# Note!: Currently supports only Ubuntu 22.04 LTS
+# Note!: Currently supports only Ubuntu 24.04 LTS
 
-echo "Welcome! Let's start setting up your system. It could take more than 10 minutes, be patient"
+echo "Welcome! Let's start setting up your system. This might take a while, so be patient."
 
 # Test to see if user is running with root privileges.
-if [[ '${UID}' -ne 0 ]]; then
-    echo 'Must execute with sudo or root' >&2
+if [[ "${UID}" -ne 0 ]]; then
+    echo 'Must execute with sudo or root privileges' >&2
     exit 1
 fi
 
+# Update and Upgrade the System
 echo ''
 echo '##########'
 echo 'Updating repository information...'
-echo 'Requires root privileges:'
-sudo apt update -y
-sudo apt upgrade -y
-# Dist-Upgrade
-echo 'Performing system upgrade...'
-sudo add-apt-repository universe
+sudo apt update && sudo apt upgrade -y
+
+# Install Snap and Flatpak support
+echo ''
+echo '##########'
+echo 'Installing Snap and Flatpak...'
+sudo apt install -y snapd flatpak gnome-software-plugin-flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Enable Universe, Multiverse Repositories
+echo ''
+echo '##########'
+echo 'Enabling Universe and Multiverse repositories...'
+sudo add-apt-repository universe -y
 sudo add-apt-repository multiverse -y
-sudo add-apt-repository ppa:eugenesan/ppa -y
-sudo apt-get install synaptic -y
-sudo apt dist-upgrade -y
-echo 'Done.'
 
+# Install Development Tools
 echo ''
 echo '##########'
-echo 'SO essentials'
-echo ''
-echo '>>> Installing libs'
-sudo apt install libxss1 libappindicator1 libindicator7 -y
-echo '>>> Install Multimedia Codecs'
-sudo apt-get install Ubuntu-restricted-extras
-echo '>>> Enable Firewall'
-sudo ufw enable
-sudo apt-get install gufw -y
-echo '>>> Installing Flatpak'
-sudo apt-get install flatpak -y
-sudo apt-get install gnome-software-plugin-flatpak -y
-flatpak remote-add --if-not-exists flathub https://flathub-org/repo/flathub.flatpakrepo
-echo 'Done.'
+echo 'Installing development tools...'
+sudo apt install -y zsh git curl
 
+# Install nvm and yarn using the preferred method
+echo 'Installing NVM (Node Version Manager) and Yarn...'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+source "$NVM_DIR/nvm.sh"
+nvm install --lts
+npm install --global yarn
+
+# Install Docker
+echo 'Installing Docker...'
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Install Development Apps via Flatpak/Snap
 echo ''
 echo '##########'
-echo 'Customize system'
-echo ''
-echo '>>> Installing gnome-tweak-tool'
-sudo apt install gnome-tweaks -y
-sudo apt install gnome-shell-extension-manager -y
-echo '>>> Installing gnome sushi'
-sudo apt-get install gnome-sushi
-echo 'Done.'
+echo 'Installing development apps...'
+sudo snap install --classic code        # Visual Studio Code
+sudo snap install gitkraken             # GitKraken
+sudo snap install android-studio --classic # Android Studio
+sudo snap install insomnia              # Insomnia
+sudo snap install termius-app           # Termius
+sudo apt install -y scrcpy              # Use APT for scrcpy (Flatpak not recommended)
+sudo flatpak install -y flathub com.usebottles.bottles # Bottles
+sudo flatpak install -y flathub org.gnome.Boxes        # GNOME Boxes
 
+# Install Docker Desktop from .deb (Not available via Snap or Flatpak)
+echo 'Installing Docker Desktop...'
+curl -LO https://desktop.docker.com/linux/main/amd64/docker-desktop-<latest-version>.deb
+sudo dpkg -i docker-desktop-<latest-version>.deb
+sudo apt --fix-broken install -y
+
+# Install Design Apps via Flatpak
 echo ''
 echo '##########'
-echo 'Installing essentials development...'
-echo ''
-echo '>>> Installing git'
-sudo apt install git -y
-echo '>>> Installing jdk'
-sudo apt install default-jdk -y
-java -version
-echo '>>> Installing python3'
-sudo apt-get install python3
-echo '>>> Installing python3-pip'
-sudo apt-get install python3-pip -y
-echo '>>> Installing nodejs'
-sudo apt install nodejs -y
-echo '>>> Installing npm'
-sudo apt install npm -y
-echo '>>> Installing yarn'
-sudo npm install --global yarn -y
-echo '>>> Installing expo'
-sudo npm install -g expo-cli -y
-echo 'Done.'
+echo 'Installing design apps...'
+sudo flatpak install -y flathub org.inkscape.Inkscape   # Inkscape
+sudo flatpak install -y flathub org.gimp.GIMP           # GIMP
 
+# Install Browsers via Flatpak
 echo ''
 echo '##########'
-echo 'Installing applications for development...'
-echo ''
-echo '>>> Installing vscode'
-flatpak install flathub com.visualstudio.code -y
-echo '>>> Installing smartgit'
-sudo apt install smartgit -y
-sudo apt install smartgithg -y
-echo '>>> Installing htop'
-sudo apt install htop
-echo '>>> Installing scrcpy'
-flatpak install flathub in.srev.guiscrcpy -y
-echo 'Done.'
+echo 'Installing browsers...'
+sudo flatpak install -y flathub com.opera.Opera         # Opera
+sudo flatpak install -y flathub com.google.Chrome       # Google Chrome
 
+# Install Media Apps via Flatpak/Snap
 echo ''
 echo '##########'
-echo 'Installing selected favourite applications...'
-echo '>>> Installing Google Chrome'
-flatpak install flathub com.google.Chrome
-echo '>>> Installing libreOffice'
-flatpak install flathub org.libreoffice.LibreOffice
-echo '>>> Installing spotify'
-flatpak install flathub com.spotify.Client
-echo '>>> Installing gimp'
-flatpak install flathub org.gimp.GIMP
-echo '>>> Installing inkscape'
-flatpak install flathub org.inkscape.Inkscape
-echo '>>> Installing simplescreenrecorder'
-sudo apt-get install simplescreenrecorder
-echo '>>> Installing steam'
-sudo apt install steam -y
-sudo apt install wine -y
-echo 'Done.'
+echo 'Installing media apps...'
+sudo flatpak install -y flathub com.valvesoftware.Steam  # Steam
+sudo snap install discord                               # Discord
+sudo flatpak install -y flathub com.stremio.Stremio      # Stremio
+sudo flatpak install -y flathub tv.plex.PlexDesktop      # Plex
+sudo flatpak install -y flathub org.videolan.VLC         # VLC
 
+# Customization - Touchégg for Multi-Touch Gestures
 echo ''
 echo '##########'
-echo 'Updating and Cleaning Unnecessary Packages'
+echo 'Installing Touchégg for touchpad gestures...'
+sudo flatpak install -y flathub com.github.joseexposito.touchegg
+
+# Install GNOME Extensions
+echo ''
+echo '##########'
+echo 'Installing GNOME extensions...'
+gnome-extensions install bluetooth-quick-connect@bjarosze.gmail.com
+gnome-extensions install nightthemeswitcher@romainvigier.fr
+
+# Final Updates and Cleanup
+echo ''
+echo '##########'
+echo 'Cleaning up unnecessary packages...'
 sudo -- sh -c 'apt-get update; apt-get upgrade -y; apt-get full-upgrade -y; apt-get autoremove -y; apt-get autoclean -y'
 clear
-echo 'Done.'
 
 echo ''
 echo '##########'
@@ -156,3 +151,5 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
 gsettings set org.gnome.mutter center-new-windows true
 echo 'Done.'
+
+echo 'Setup complete! Please restart your system for all changes to take effect.'
